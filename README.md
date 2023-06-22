@@ -111,3 +111,12 @@ novel-cloud
 
 ![mini-code](https://s1.ax1x.com/2020/10/31/BUQJwq.png)
 
+## Fork笔记
+
+部署大致流程参考：https://docs.xxyopen.com/course/novelcloud/2.html#%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2
+
+Spring Boot Admin 面板的账号密码硬编码在项目代码中：user; password
+
+第一次启动会不成功，但是只要nocas和数据库正常启动了就行。需要更改许多nocas上的配置文件，主要是服务的ip地址和访问密码。之后再重启一次，服务就能正常起来了。
+
+但是服务还是无法正常工作，推测是硬编码中还是有原来的ip地址会影响（需要硬编码修改），也有可能是给的配置文件中rabbitmq的文件格式不对，以后有时间再做尝试实践。
